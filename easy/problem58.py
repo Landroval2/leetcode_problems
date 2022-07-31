@@ -14,6 +14,22 @@ class Solution:
                 return word_length
 
 
+# Better solution from user jsdsz. It iterates the list backwards until it finds a full word and returns its length.
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        i = len(s) - 1
+        count = 0
+        while i >= 0:
+            if s[i] != " ":
+                count += 1
+                i -= 1
+            elif count > 0 and s[i] == " ":
+                break
+            else:
+                i -= 1
+        return count
+
+
 if __name__ == "__main__":
     input_list = [
         "Hello World",
