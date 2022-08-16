@@ -56,5 +56,3 @@ if __name__ == "__main__":
             failed_solutions += 1
     if failed_solutions == 0:
         print("All tests passed!")
-
-# TODO: Find a solution to "hash" the lenghts that were already calculated. We are calculating the lenght of each tree every single time. If we could start from the end and go to the beginning, we could use the values already calculated.
